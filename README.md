@@ -1,6 +1,9 @@
 # sudoku
 A simple sudoku game using python and pygame.
 
+# Important
+There are external files like fonts in fonts folder, so please put these files in the correct directory(it will be ur python current directory) or change accordingly.
+
 # Algorithm
 Backtracking algorithm
 
