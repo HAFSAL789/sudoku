@@ -16,4 +16,4 @@ Backtracking algorithm
 6. If you win the game it shows **won** on the top board or it will show **wrong**.
 
 
-Thanks u.
+Thank u.
