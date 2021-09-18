@@ -8,7 +8,7 @@ import os
 pygame.init()
 gamescreen = pygame.display.set_mode((500, 530))
 pygame.display.set_caption("sudoku")
-icon_img = pygame.image.load(os.getcwd() + "/fonts" + "/icon.png")
+icon_img = pygame.image.load(os.path.join("fonts", "icon.png"))
 pygame.display.set_icon(icon_img)
 
 # secondary board for highlighting red color around the possible places where user can put numbers
@@ -35,14 +35,14 @@ def timefun(seconds):
 
 # to display won
 def win():
-    win_font = pygame.font.Font(os.getcwd() + "/fonts" + "/Starjedi.ttf", 19)
+    win_font = pygame.font.Font(os.path.join("fonts", "starjedi.ttf"), 19)
     renderd_Win = win_font.render("won", True, (255, 191, 0))
     return gamescreen.blit(renderd_Win, (350, 0)), gamescreen.blit(renderd_Win, (150, 0))
 
 
 # to display wrong
 def failed():
-    win_font = pygame.font.Font(os.getcwd() + "/fonts" + "/Starjedi.ttf", 19)
+    win_font = pygame.font.Font(os.path.join("fonts", "starjedi.ttf"), 19)
     renderd_Win = win_font.render("Wrong", True, (255, 0, 0))
     return gamescreen.blit(renderd_Win, (300, 0)), gamescreen.blit(renderd_Win, (150, 0))
 
@@ -57,8 +57,8 @@ def sudokufun():
     start = time.time()
     gamescreen.fill((178, 190, 181))
     # fonts
-    mainmenu = pygame.font.Font(os.getcwd() + "/fonts" + "/MyUglyHandwriting-Regular.otf", 25)
-    board_numbers = pygame.font.Font(os.getcwd() + "/fonts" + "/Zector.ttf", 30)
+    mainmenu = pygame.font.Font(os.path.join("fonts", "MyUglyHandwriting-Regular.otf"), 25)
+    board_numbers = pygame.font.Font(os.path.join("fonts", "zector.ttf"), 30)
 
     # to keep looping until false
     running = True
@@ -153,8 +153,8 @@ def sudokufun():
             timer = timefun(time.time() - start)
         else:
             timer = stopped_time
-        timerfont = pygame.font.Font(os.getcwd() + "/fonts" + "/MyUglyHandwriting-Regular.otf", 25).render(timer, True,
-                                                                                                           (0, 0, 0))
+        timerfont = pygame.font.Font(os.path.join("fonts", "MyUglyHandwriting-Regular.otf"), 25).render(timer, True,
+                                                                                                        (0, 0, 0))
         gamescreen.blit(timerfont, (450, 4))
 
         # solve button
@@ -206,8 +206,8 @@ def sudokufun():
 def mainfun():
     # general things
     gamescreen.fill((255, 109, 58))
-    font = pygame.font.Font(os.getcwd() + "/fonts" + "/space age.ttf", 40)
-    font_button = pygame.font.Font(os.getcwd() + "/fonts" + "/Starjedi.ttf", 35)
+    font = pygame.font.Font(os.path.join("fonts", "space age.ttf"), 40)
+    font_button = pygame.font.Font(os.path.join("fonts", "starjedi.ttf"), 35)
     text = font.render("sudoku", True, (255, 255, 255))
 
     # newgame button
