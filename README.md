@@ -2,8 +2,8 @@
 A simple sudoku game using python and pygame.
 
 # Os tested
-windows
-linux-debian
+1. windows
+2. linux-debian (ubuntu LTS 20.04)
 
 # Important
 There are external files like fonts in fonts folder, so please put these files in the correct directory(it will be ur python current directory) or change accordingly.
