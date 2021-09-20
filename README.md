@@ -1,7 +1,7 @@
 # sudoku
 A simple sudoku game using python and pygame.
 
-# Os tested
+# Os Support
 1. windows
 2. linux-debian (ubuntu LTS 20.04)
 
